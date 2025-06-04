@@ -4,7 +4,7 @@
     <app-demo [msg]="inputMsg" [msg1]="inputMsg1" *ngIf="Destroy">
       <p #content>The content is projected {{inputMsg}}</p>
     </app-demo>
-    <button (click)="assignInputMsg(inp)">Submit</button>
+    <button >Submit</button>
     <button (click)="assignInputMsg1(inp1)">Submit1</button>
     <p>{{normal}}</p>
     <button (click)="DestroyComp()">show/hide</button>
