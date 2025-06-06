@@ -1,7 +1,7 @@
 <div class="container">
     <input type="text" (focus)="focus()" #inp/>
     <input type="text" (focus)="0" #inp1/>
-    <app-demo [msg]="inputMsg" [msg1]="inputMsg1" *ngIf="Destroy">
+    <app-demo [msg]="inputMsg" [msg1]="inputMsg1" *ngIf="Destroy" (childEvent)="emitted($event)">
       <p #content>The content is projected {{inputMsg}}</p>
     </app-demo>
     <button >Submit</button>

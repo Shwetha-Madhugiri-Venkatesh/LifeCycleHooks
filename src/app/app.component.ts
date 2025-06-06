@@ -39,4 +39,8 @@ export class AppComponent {
   DestroyComp(){
     this.Destroy=!this.Destroy;
   }
+
+  emitted(obj){
+    console.log(obj);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, ContentChild, DoCheck, ElementRef, Input, OnChanges, OnInit, ViewChild } from '@angular/core';
+import { Component, ContentChild, DoCheck, ElementRef, EventEmitter, Input, OnChanges, OnInit, Output, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
@@ -65,4 +65,13 @@ export class DemoComponent implements OnChanges,OnInit,DoCheck{
   ngOnDestroy(){
    console.log("ngOnDestroy is called");
   }
+
+  childvar:{}={name:"shwetha","marks":100};
+  @Output()
+  childEvent:EventEmitter<object> = new EventEmitter<object>;
+
+  emit_event(){
+    this.childEvent.emit(this.childvar);
+  }
+
 }
